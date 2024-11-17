@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Питання {{ index }} з {{ total }}</h1>
+    <p>{{ question.question }}</p>
+    <form method="post">
+        {% for option in question.options %}
+        <label>
+            <input type="radio" name="answer" value="{{ option }}" required>{{ option }}
+        </label>
+        {% endfor %}
+        <button type="submit">Наступне питання</button>
+    </form>
+</body>
+</html>
